@@ -44,7 +44,7 @@ let theme = createMuiTheme({
       rounded: { borderRadius: 6 },
     },
     MuiChip: {
-      root: { borderRadius: 6 },
+      root: { borderRadius: 6, fontSize: "0.75em" },
     },
   },
 });

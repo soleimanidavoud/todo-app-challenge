@@ -1,10 +1,4 @@
-import {
-  Button,
-  Grid,
-  SvgIcon,
-  TextField,
-  Typography,
-} from "@material-ui/core";
+import { Button, Grid, TextField, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { useContext } from "react";
 import { TodoContext } from "../context/TodoContext";
@@ -51,11 +45,7 @@ export default function TodoInit() {
           fullWidth
           size="large"
           className={classes.addButton}
-          startIcon={
-            <SvgIcon>
-              <Add />
-            </SvgIcon>
-          }
+          startIcon={<Add />}
           type="submit"
         >
           Add

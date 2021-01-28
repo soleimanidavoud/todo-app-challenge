@@ -2,7 +2,6 @@ import {
   Button,
   Grid,
   MenuItem,
-  SvgIcon,
   TextField,
   Typography,
 } from "@material-ui/core";
@@ -101,11 +100,7 @@ export default function TodoEditor(props) {
           color="primary"
           fullWidth
           size="large"
-          startIcon={
-            <SvgIcon>
-              <Edit />
-            </SvgIcon>
-          }
+          startIcon={<Edit />}
           onClick={handleEditTodo}
         >
           Edit

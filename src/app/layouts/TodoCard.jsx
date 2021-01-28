@@ -4,7 +4,6 @@ import {
   IconButton,
   makeStyles,
   Paper,
-  SvgIcon,
   Typography,
 } from "@material-ui/core";
 import { useContext } from "react";
@@ -35,7 +34,7 @@ const useStyles = makeStyles((theme) => {
     },
     expand: { flexGrow: 1 },
     actionContainer: { marginTop: 10 },
-    icon: { color: "#000", fontSize: "1em", margin: 2 },
+    icon: { color: "#000", fontSize: "1em" },
   };
 });
 
@@ -61,15 +60,20 @@ export default function TodoCard(props) {
             size="small"
           />
           <div className={classes.expand} />
-          <IconButton size="small" onClick={handleDeleteTodo}>
-            <SvgIcon className={classes.icon}>
-              <Delete />
-            </SvgIcon>
+          <IconButton
+            size="small"
+            onClick={handleDeleteTodo}
+            className={classes.icon}
+          >
+            <Delete />
           </IconButton>
-          <IconButton size="small" component={Link} to={`/edit/${todo?.id}`}>
-            <SvgIcon className={classes.icon}>
-              <Edit />
-            </SvgIcon>
+          <IconButton
+            size="small"
+            component={Link}
+            to={`/edit/${todo?.id}`}
+            className={classes.icon}
+          >
+            <Edit />
           </IconButton>
         </Grid>
       </Paper>
